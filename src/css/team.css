@@ -1,0 +1,37 @@
+#a3{
+    color: var(--main-blue-color)
+}
+.default_container{
+    padding-bottom: 2% !important;
+}
+.another_grid_container{
+    width: 66%;
+    margin: auto;
+    padding-bottom: 5%;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.col_custom{
+    text-align: center;
+    padding-bottom: 5%;
+}
+.col_custom span{
+    color: #606060;
+    font-size: 11px;
+    display: inline-block;
+    line-height: 15px !important;
+}
+.col_custom p{
+    margin-bottom: 0.2rem;
+}
+.toggle_icon_button{
+    display: none;
+}
+.icons{
+    display: flex;
+    margin: 30px;
+    justify-content: space-around;
+}

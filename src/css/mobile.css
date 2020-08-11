@@ -1,0 +1,140 @@
+@media (max-width: 800px){
+    .nav_item a{
+        display: none;
+    }
+    .nav_title{
+        flex: 1;
+    }
+    .toggle_icon_button{
+        display: block;
+        width: 30px;
+        border: none;
+        height: 30px;
+        padding: 0;
+        z-index: 5;
+        cursor: pointer;
+        background-color: #ffffff;    
+        outline: none !important;   
+    }
+    .nav_bar_container{    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .toggle_icon::after, .toggle_icon::before{
+        position: absolute;
+        content: "";
+    }   
+    .toggle_icon::after{
+        top: -10px;
+        left: 0;
+    }
+    .toggle_icon::before{
+        bottom: -10px;
+        left: 0;
+    }
+    .toggle_icon{
+        position: relative;
+        display: inline-block;
+        flex: 1;     
+    }
+    .toggle_icon::after, .toggle_icon::before, .toggle_icon{
+        width: 30px;
+        height: 2px;
+        background-color: var(--main-blue-color);
+    }
+
+    .open .nav_bar_container{
+        margin: 0% 10%;
+        height: 100%;
+    }
+    .open{
+        -webkit-animation: opening 0.6s ease; 
+        -moz-animation: opening 0.6s ease; 
+        -ms-animation: opening 0.6s ease; 
+        -o-animation: opening 0.6s ease; 
+        animation: opening 0.6s ease;
+        height: 50vh;
+    }
+    .hidden .nav_item, .open .nav_item{
+        -webkit-transition: all 0.7s ease;
+        -moz-transition: all 0.7s ease;
+        -ms-transition: all 0.7s ease;
+        -o-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+
+    }
+    .open .nav_title{
+        flex: 0;
+    }
+    .open .nav_bar{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .open a{
+        display: inline;
+    }
+    
+    .hidden{
+        min-height: 11vh;
+        display: flex;
+        align-items: center;
+        
+        -webkit-animation: closing 0.5s ease; 
+        -moz-animation: closing 0.5s ease; 
+        -ms-animation: closing 0.5s ease; 
+        -o-animation: closing 0.5s ease; 
+        animation: closing 0.5s ease;
+    }
+
+    .default_title::after{
+        top: 100% !important;
+    }
+    .features_icons{
+        flex-direction: column;
+        line-height: 40px;
+    }
+    .brands{
+        position: relative;
+    }
+
+    .toggle_icon_button{
+        background-color: black ;
+    }
+    .col_custom{
+        margin-top: 15%;
+    }
+    .another_grid_container{
+        padding-bottom: 15%;
+    }
+    .grid_container{
+        padding-bottom: 15%;
+    }
+}
+.footer_text{
+    flex: 2;
+}
+#footer{
+    padding: 20px 0;
+}
+
+@keyframes opening{
+    from{
+        height: 11vh;
+    }
+    to{
+        height: 50vh;
+    }
+}
+
+@keyframes closing{
+    from{
+        height: 50vh;
+    }
+    to{
+        height: 12.5vh;
+    }
+}
